@@ -122,7 +122,7 @@ async function main() {
   const url = 'https://www.tripadvisor.com/Restaurants-g188644-Brussels.html';
 
   const shots = [];
-  for (let index = 1; index < 2; index++) {
+  for (let index = 1; index < 3721/30 + 1; index++) {
     await downloadShootingData(browser, url, index);
     let newArray = await parseShots(index)
     Array.prototype.push.apply(shots, newArray);
